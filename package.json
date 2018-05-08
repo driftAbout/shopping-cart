@@ -4,7 +4,10 @@
   "description": "Basic shopping cart made with reaxt",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest -i --verbose"
+    "bundle": "webpack",
+    "watch": "webpack-dev-server --inline --hot",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
