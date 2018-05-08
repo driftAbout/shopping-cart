@@ -1,4 +1,15 @@
+.nav-list {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
 .nav-item {
   display:  inline-block;
-  margin: .5em;
+  margin-right: .5em;
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
 }

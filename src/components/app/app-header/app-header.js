@@ -10,8 +10,8 @@ export default class AppHeader extends React.Component{
   render(){
     return (
       <header>
-        <h1>Everything [a-zA-Z]</h1>
         <AppNav />
+        <h1>Everything [a-zA-Z]</h1>
       </header>
     );
   }

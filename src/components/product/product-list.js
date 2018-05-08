@@ -9,7 +9,15 @@ export default class ProductList extends React.Component{
   render(){
     return (
       <ul className="product-list">
-        <ProductItem />
+        {this.props.products.length ?
+          this.props.products.map(product =>
+            <ProductItem
+              key={product.id}
+              product={product}
+            />
+          )
+          : undefined
+        }
       </ul>
     );
   }
