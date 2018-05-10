@@ -4,6 +4,7 @@ import store from '../../lib/store';
 import {Route, Redirect} from 'react-router-dom';
 import Home from '../home/home';
 import Cart from '../cart/cart';
+import ProductsView from '../product/products-view';
 import {AppHeader} from '../app';
 import {AppFooter} from '../app';
 
@@ -19,6 +20,7 @@ export default class App extends React.Component{
           <AppHeader />
           <main>
             <Route exact path="/" component={Home} />
+            <Route exact path="/products" component={ProductsView} />
             <Route exact path="/cart" component={Cart} />
           </main>
           <AppFooter />
@@ -27,4 +29,3 @@ export default class App extends React.Component{
     );
   }
 }
-
