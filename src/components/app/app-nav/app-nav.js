@@ -12,6 +12,7 @@ export default class AppNav extends React.Component{
       <nav>
         <ul className="nav-list">
           <li className="nav-item"><Link to="/">Home</Link></li>
+          <li className="nav-item"><Link to="/products">Products</Link></li>
           <li className="nav-item"><Link to="/cart">Cart</Link></li>
         </ul>
       </nav>
