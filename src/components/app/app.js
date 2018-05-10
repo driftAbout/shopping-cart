@@ -7,7 +7,6 @@ import Cart from '../cart/cart';
 import {AppHeader} from '../app';
 import {AppFooter} from '../app';
 
-
 export default class App extends React.Component{
   constructor(props){
     super(props);
@@ -28,3 +27,4 @@ export default class App extends React.Component{
     );
   }
 }
+

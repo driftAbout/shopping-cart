@@ -2,9 +2,8 @@ export default (state=[], action) => {
   let {type, payload} = action;
 
   let takeAction = {};
-  takeAction['CART_ADD'] = item => {
-    return [...state, item];
-  };
+
+  takeAction['PRODUCTS_SET'] = products => [...state, ...products];
 
   return takeAction[type] ? takeAction[type](payload) : state;
 };

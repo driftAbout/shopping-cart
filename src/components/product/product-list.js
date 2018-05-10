@@ -1,3 +1,4 @@
+import './_product.scss';
 import React from 'react';
 import ProductItem from './product-item';
 

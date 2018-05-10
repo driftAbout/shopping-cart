@@ -4,5 +4,4 @@ function Product(id, value){
   this.value = value;
 }
 
-const testProducts = [
-];
+export default () => [...Array(16)].map((item, i) => new Product(i, String.fromCharCode(65 + i)));
