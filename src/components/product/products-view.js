@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductList from '../product/product-list';
-//import products from '../../lib/test-products';
+import SelectFilter from '../select-box/filter/filter';
 import {connect} from 'react-redux';
 import {getProductsRequest} from '../../actions/product-actions';
 
@@ -18,6 +18,7 @@ class ProductsView extends React.Component{
     return (
       <section className="products-view-container">
         <h2>Start your own vowel movement!</h2>
+        <SelectFilter />
         <ProductList products={this.props.products}/>
       </section>
     );
