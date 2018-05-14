@@ -22,9 +22,10 @@ export default class SelectFilter extends React.Component{
 
   handleSelect(val){
     this.setState({selectedValue: val, isVisible: false});
+    this.props.onFilter(val);
   }
 
-  handleBlur(e){
+  handleBlur(){
     this.setState({isVisible: false});
   }
 
