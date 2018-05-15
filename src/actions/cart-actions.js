@@ -3,4 +3,14 @@ const addToCart = product => ({
   payload: product,
 });
 
-export {addToCart};
+const resetCart = () =>({
+  type: 'CART_RESET',
+  payload: [],
+});
+
+const removeFromCart = product => ({
+  type: 'CART_REMOVE_PRODUCT',
+  payload: product,
+});
+
+export {addToCart, resetCart, removeFromCart};

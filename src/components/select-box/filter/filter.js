@@ -6,7 +6,7 @@ export default class SelectFilter extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      selectedValue: 'All',
+      selectedValue: this.props.filter,
     };
 
     this.filters = ['All', 'Consonants', 'Vowels', 'Vowels ( Sometimes Y )'];
