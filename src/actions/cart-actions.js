@@ -13,4 +13,9 @@ const removeFromCart = product => ({
   payload: product,
 });
 
-export {addToCart, resetCart, removeFromCart};
+const updateCart = product => ({
+  type: 'CART_UPDATE_PRODUCT',
+  payload: product,
+});
+
+export {addToCart, resetCart, removeFromCart, updateCart};

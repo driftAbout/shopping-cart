@@ -2,7 +2,7 @@ import './_cart.scss';
 import React from 'react';
 import CartTable from './cart-table';
 import {connect} from 'react-redux';
-import {resetCart, removeFromCart} from '../../actions/cart-actions';
+import {resetCart, removeFromCart, updateCart} from '../../actions/cart-actions';
 
 class CartView extends React.Component{
   constructor(props){
@@ -24,7 +24,8 @@ class CartView extends React.Component{
           {this.props.cart.length ?
             <CartTable cart={this.state.cart}
               removeFromCart={this.props.removeFromCart}
-              emptyCart={this.props.emptyCart}/>
+              emptyCart={this.props.emptyCart}
+              updateCart={this.props.updateCart}/>
             : <div className="empty-cart-message">There are no items in your cart</div>}
         </article>
       </section>
@@ -38,7 +39,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   emptyCart: () => dispatch(resetCart()),
-  removeFromCart: (product) => dispatch(removeFromCart(product)),
+  removeFromCart: product => dispatch(removeFromCart(product)),
+  updateCart: product => dispatch(updateCart(product)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartView);

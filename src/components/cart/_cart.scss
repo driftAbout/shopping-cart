@@ -35,6 +35,15 @@
   td {
     vertical-align: middle;
   }
+
+  .item-price {
+    text-align: right;
+    margin-right: 1em;
+  }
+  .item-subtotal {
+    text-align: right;
+    margin-right: 1em;
+  }
 }
 
 .cart-table {
@@ -52,6 +61,15 @@
   box-shadow: 0 0 80px 0px inset #bbb;
   font-size: 1.5em;
   border-radius: .25em;
+}
+
+.cart-table-footer-row {
+  font-size: 1.5em;
+}
+
+td .cart-table-items-count, td .cart-table-total {
+  font-size: 1em;
+  margin-left: 1em;
 }
 
 .cart-view-container {
@@ -77,9 +95,9 @@
   text-align: right;
 }
 
-.remove-from-cart-btn {
+.remove-from-cart-btn, .update-item-quantity {
   vertical-align: top;
-  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .empty-cart-button {
@@ -95,7 +113,6 @@
   font-size: 1.1em;
   border-radius: .2em;
 
-
     &:hover {
       opacity: .9;
     }
@@ -103,5 +120,25 @@
     &:active {
       color: #fff;
       background-color: #b90000;
+    }
+}
+
+.update-item-quantity {
+  outline: none;
+  background-color: #49b8e2;
+  color: #03005d;
+  font-size: 1.25em;
+  padding: .5em 1em;
+  font-size: 1.1em;
+  border-radius: .2em;
+
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &:active {
+      color: #fff;
+      background-color: #044c66;
     }
 }
