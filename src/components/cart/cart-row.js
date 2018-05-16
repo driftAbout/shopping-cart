@@ -16,15 +16,21 @@ export default class CartRow extends React.Component{
   }
 
   componentWillMount(){
-    this.setState({subtotal: this.handleUpdateTotals(this.state.quantity)});
-    this.updateCartTotals(this.state.quantity, this.state.quantity, this.handleUpdateTotals(this.state.quantity));
+    // this.setState({subtotal: this.handleUpdateTotals(this.state.quantity)});
+    // this.updateCartTotals(this.state.quantity, this.state.quantity, this.handleUpdateTotals(this.state.quantity));
+    let subtotal = this.mathRoundCents(this.state.quantity * this.state.price);
+    this.setState({subtotal: subtotal});
+    this.updateCartTotals(this.state.quantity, this.state.quantity, subtotal);
+
   }
 
   handleChange(e){
     this.quantityRef.current.blur();
     let quantityChange = e.target.value - this.state[e.target.name];
-    let subtotalChange = quantityChange * this.state.price;
-    this.setState({[e.target.name]: [e.target.value], subtotal: this.handleUpdateTotals(e.target.value)});
+    let subtotalChange = this.mathRoundCents(quantityChange * this.state.price);
+    let subtotal = this.mathRoundCents(e.target.value * this.state.price);
+    //this.setState({[e.target.name]: [e.target.value], subtotal: this.handleUpdateTotals(e.target.value)});
+    this.setState({[e.target.name]: [e.target.value], subtotal: subtotal});
     this.updateCartTotals( e.target.value, quantityChange, subtotalChange);
   }
 
@@ -43,6 +49,9 @@ export default class CartRow extends React.Component{
     //this.props.updateTotal();
   }
 
+  mathRoundCents(value){
+    return  Math.round((value) * 100) / 100;
+  }
 
 
   render(){
