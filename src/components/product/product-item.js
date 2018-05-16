@@ -18,9 +18,9 @@ class ProductItem extends React.Component{
   }
 
   handleAddToCart(){
-    if (!this.props.cart.every(item => item.id !== this.state.product.id)) return;
-    this.props.addToCart(this.state.product);
     this.setState({isVisible: !this.state.isVisible});
+    if (this.props.cart.products && !this.props.cart.products.every(item => item.id !== this.state.product.id)) return;
+    this.props.addToCart(this.state.product);
   }
 
   render(){
@@ -40,8 +40,6 @@ class ProductItem extends React.Component{
     );
   }
 }
-
-
 
 const mapStateToProps = state => ({
   cart: state.cart,

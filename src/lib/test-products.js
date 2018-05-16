@@ -3,6 +3,7 @@ function Product(id, value, type){
   this.id = id;
   this.value = value;
   this.type = type;
+  this.price = 1.79;
 }
 
 export default () => {

@@ -21,7 +21,7 @@ class CartView extends React.Component{
       <section className="cart-view-container">
         <h2>Shopping Cart</h2>
         <article>
-          {this.props.cart.length ?
+          {(this.props.cart.products && this.props.cart.products.length) ?
             <CartTable cart={this.state.cart}
               removeFromCart={this.props.removeFromCart}
               emptyCart={this.props.emptyCart}

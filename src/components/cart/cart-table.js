@@ -5,20 +5,13 @@ export default class CartTable extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      itemsCount: 0,
-      total: 0,
+      itemsCount: this.props.cart.itemsTotal || 0,
+      total: this.props.cart.total || 0,
     };
-
-    this.updateTotals = this.updateTotals.bind(this);
   }
 
-  updateTotals(countUpdate, subtotalUpdate, product){
-    this.setState({
-      itemsCount: this.state.itemsCount + countUpdate,
-      total: this.state.total + subtotalUpdate,
-    });
-    if (!product === undefined)
-      this.props.updateCart(product);
+  componentWillReceiveProps(nextProps){
+    this.setState({itemsCount: nextProps.cart.itemsTotal, total:nextProps.cart.total});
   }
 
   render(){
@@ -34,21 +27,21 @@ export default class CartTable extends React.Component{
             </tr>
           </thead>
           <tbody>
-            {this.props.cart.map(prod =>
+            {this.props.cart.products.map(prod =>
               <CartRow
                 key={prod.id}
                 product={prod}
                 removeFromCart={this.props.removeFromCart}
-                updateTotals={this.updateTotals}
+                updateCartProduct={this.props.updateCart}
               />
             )}
           </tbody>
           <tfoot>
             <tr className="cart-table-footer-row">
               <td></td>
-              <td>Items<span className="cart-table-items-count">{this.state.itemsCount}</span></td>
+              <td><span className="cart-table-items-count-label">Items:</span><span className="cart-table-items-count">{this.state.itemsCount}</span></td>
               <td></td>
-              <td>Total<span className="cart-table-total">{this.state.total}</span></td>
+              <td>Total:<span className="cart-table-total">{this.state.total}</span></td>
             </tr>
           </tfoot>
         </table>

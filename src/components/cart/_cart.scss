@@ -69,7 +69,10 @@
 
 td .cart-table-items-count, td .cart-table-total {
   font-size: 1em;
-  margin-left: 1em;
+  margin-left: .5em;
+  text-align: right;
+  width: 2.5em;
+  display: inline-block;
 }
 
 .cart-view-container {
