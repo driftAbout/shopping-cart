@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {addToCart} from '../../actions/cart-actions';
+import {Link} from 'react-router-dom';
 
 class ProductItem extends React.Component{
   constructor(props){
@@ -27,10 +28,12 @@ class ProductItem extends React.Component{
     return (
       <li className='product-item'>
         <div className="product-container">
-          <div className="product-image"
-            onClick={this.handleClickImage}>
-            {this.props.product.value}
-          </div>
+          <Link to={{pathname:`/product/${this.props.product.id}`, state: {product: this.props.product}}} >
+            <div className="product-image"
+              onClick={this.handleClickImage}>
+              {this.props.product.value}
+            </div>
+          </Link>
           <div className={`product-info${this.state.isVisible ? ' visible' : ''}`}
             onClick={this.handleAddToCart}>
             <p>Add to Cart<span className="icon-cart"></span></p>
