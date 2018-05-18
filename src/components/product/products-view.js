@@ -18,6 +18,13 @@ class ProductsView extends React.Component{
       Consonants: 'consonant',
     };
 
+    this.headingMap = {
+      Vowels: 'Start your own vowel movement!',
+      Consonants: 'I see you like the hard stuff.',
+      All: 'We are the bottled water of letters!',
+      'Vowels ( Sometimes Y )': 'You always have to be different, don\'t you...',
+    };
+
     this.handleFilter = this.handleFilter.bind(this);
   }
 
@@ -49,9 +56,9 @@ class ProductsView extends React.Component{
   render(){
     return (
       <section className="products-view-container">
-        <h2>Start your own vowel movement!</h2>
         <SelectFilter onFilter={this.handleFilter}
           filter={this.state.currentFilter}/>
+        <h2>{this.headingMap[this.props.filter]}</h2>
         <ProductList products={this.state.productList}/>
       </section>
     );

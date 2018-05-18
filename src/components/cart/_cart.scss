@@ -16,6 +16,7 @@
     background-color: #c7fcff;
     box-shadow: inset 0 0 100px 0px #0562a5;
     cursor: pointer;
+    user-select: none;
   }
 }
 
@@ -32,6 +33,7 @@
 
 .cart-row {
   border-bottom: 1px solid #ccc;
+
   td {
     vertical-align: middle;
   }

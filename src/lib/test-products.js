@@ -4,6 +4,7 @@ function Product(id, value, type){
   this.value = value;
   this.type = type;
   this.price = 1.79;
+  this.description = `The Amazing and Mighty Letter ${value}`;
 }
 
 export default () => {

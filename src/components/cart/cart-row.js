@@ -15,6 +15,10 @@ export default class CartRow extends React.Component{
     this.handleRemove = this.handleRemove.bind(this);
   }
 
+  componentWillReceiveProps(nextProps){
+    console.log('cart-row-props', nextProps);
+  }
+
   handleChange(e){
     this.quantityRef.current.blur();
     let quantity = parseInt(e.target.value);

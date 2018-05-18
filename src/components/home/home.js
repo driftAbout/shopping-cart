@@ -10,7 +10,14 @@ class Home extends React.Component{
   render(){
     return (
       <section>
-        <h2>Buy Something!</h2>
+        <div className="landing-container">
+          <h2>That&apos;s a whole lot of</h2>
+          <span className="letter-logo-image">C</span>
+          <span className="letter-logo-image">R</span>
+          <span className="letter-logo-image">A</span>
+          <span className="letter-logo-image">P</span>
+          <h3>Buy Something!</h3>
+        </div>
       </section>
     );
   }
