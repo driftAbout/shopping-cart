@@ -12,10 +12,11 @@ class Home extends React.Component{
       <section>
         <div className="landing-container">
           <h2>That&apos;s a whole lot of</h2>
-          <span className="letter-logo-image">C</span>
-          <span className="letter-logo-image">R</span>
-          <span className="letter-logo-image">A</span>
-          <span className="letter-logo-image">P</span>
+          <span className="letter-logo-image">S</span>
+          <span className="letter-logo-image">T</span>
+          <span className="letter-logo-image">U</span>
+          <span className="letter-logo-image">F</span>
+          <span className="letter-logo-image">F</span>
           <h3>Buy Something!</h3>
         </div>
       </section>
