@@ -1,5 +1,6 @@
 import React from 'react';
 import CartRow from './cart-row';
+import {Link} from 'react-router-dom';
 
 export default class CartTable extends React.Component{
   constructor(props){
@@ -49,6 +50,12 @@ export default class CartTable extends React.Component{
           <button type="button"
             className="empty-cart-button"
             onClick={this.props.emptyCart}>empty cart</button>
+          {/* <button type="button"
+            className="checkout-cart-btn"
+            onClick={this.props.emptyCart}>Checkout</button> */}
+          <span
+            className="checkout-cart-btn">
+            <Link to='/checkout'>Checkout</Link></span>
         </div>
       </div>
     );

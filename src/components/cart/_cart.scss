@@ -101,12 +101,36 @@ td .cart-table-items-count, td .cart-table-total {
 }
 
 .remove-from-cart-btn, .update-item-quantity {
+  cursor: pointer;
   vertical-align: top;
   margin-right: 1em;
 }
 
 .empty-cart-button {
+  cursor: pointer;
   margin: 1em .5em;
+  float: left;
+}
+
+.checkout-cart-btn {
+  cursor: pointer;
+  margin: 1em .5em;
+  float: right;
+  outline: none;
+  background-color: #eee;
+  color: #333;
+  font-size: 1.25em;
+  padding: .5em 1em;
+  font-size: 1.1em;
+  border-radius: .2em;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &:active {
+     background: #ccc;
+    }
 }
 
 .empty-cart-button, .remove-from-cart-btn {

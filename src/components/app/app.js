@@ -8,6 +8,7 @@ import ProductsView from '../product/products-view';
 import ProductView from '../product/product-view/product-view';
 import {AppHeader} from '../app';
 import {AppFooter} from '../app';
+import {CheckoutView} from '../checkout/checkout-view/checkout-view';
 
 export default class App extends React.Component{
   constructor(props){
@@ -23,6 +24,7 @@ export default class App extends React.Component{
             <Route exact path="/" component={Home} />
             <Route exact path="/products" component={ProductsView} />
             <Route exact path="/cart" component={CartView} />
+            <Route exact path="/checkout" component={CheckoutView} />
             <Route path="/product/:product" component={ProductView} />
           </main>
           <AppFooter />
