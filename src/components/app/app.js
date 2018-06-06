@@ -8,7 +8,7 @@ import ProductsView from '../product/products-view';
 import ProductView from '../product/product-view/product-view';
 import {AppHeader} from '../app';
 import {AppFooter} from '../app';
-import {CheckoutView} from '../checkout/checkout-view/checkout-view';
+import CheckoutView from '../checkout/checkout-view/checkout-view';
 
 export default class App extends React.Component{
   constructor(props){

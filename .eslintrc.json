@@ -12,6 +12,7 @@
     "res": true,
     "next": true,
     "__API_URL__": true,
+    "__STRIPE_API_KEY__": true,
     "getState": true
   },
   "ecmaFeatures": {

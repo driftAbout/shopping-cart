@@ -118,8 +118,6 @@ td .cart-table-items-count, td .cart-table-total {
   float: right;
   outline: none;
   background-color: #eee;
-  color: #333;
-  font-size: 1.25em;
   padding: .5em 1em;
   font-size: 1.1em;
   border-radius: .2em;
@@ -130,6 +128,12 @@ td .cart-table-items-count, td .cart-table-total {
 
     &:active {
      background: #ccc;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.25em;
     }
 }
 

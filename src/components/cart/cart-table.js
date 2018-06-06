@@ -55,7 +55,7 @@ export default class CartTable extends React.Component{
             onClick={this.props.emptyCart}>Checkout</button> */}
           <span
             className="checkout-cart-btn">
-            <Link to='/checkout'>Checkout</Link></span>
+            <Link to="/checkout">Checkout</Link></span>
         </div>
       </div>
     );
