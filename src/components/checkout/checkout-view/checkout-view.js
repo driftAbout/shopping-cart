@@ -6,6 +6,7 @@ import {Elements} from 'react-stripe-elements';
 
 import InjectedCheckoutForm from '../checkout-form/checkout-form';
 import InjectedAddressForm from '../checkout-address/checkout-address';
+import PaymentRequestForm from '../checkout-payment-request/checkout-payment-request';
 
 class CheckoutView extends React.Component{
   constructor(props){
@@ -19,6 +20,7 @@ class CheckoutView extends React.Component{
           <h1>Checkout</h1>
           <Elements>
             <InjectedCheckoutForm />
+            {/* <PaymentRequestForm amount={this.props.total} /> */}
           </Elements>
           {/* <Elements>
             <InjectedAddressForm />
