@@ -5,8 +5,6 @@ import {StripeProvider} from 'react-stripe-elements';
 import {Elements} from 'react-stripe-elements';
 
 import InjectedCheckoutForm from '../checkout-form/checkout-form';
-import InjectedAddressForm from '../checkout-address/checkout-address';
-import PaymentRequestForm from '../checkout-payment-request/checkout-payment-request';
 
 class CheckoutView extends React.Component{
   constructor(props){
@@ -17,14 +15,10 @@ class CheckoutView extends React.Component{
     return (
       <StripeProvider apiKey={__STRIPE_API_KEY__}>
         <section className="checkout-container">
-          <h1>Checkout</h1>
+          <h1>Check it Out!</h1>
           <Elements>
             <InjectedCheckoutForm />
-            {/* <PaymentRequestForm amount={this.props.total} /> */}
           </Elements>
-          {/* <Elements>
-            <InjectedAddressForm />
-          </Elements> */}
         </section>
       </StripeProvider>
     );
